@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Doces da Dani</title>
+    <link rel="stylesheet" href="contato.css"> <!-- CSS exclusivo para a página de contato -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contato">
+        <h2>Entre em Contato</h2>
+        <p>Para encomendas e informações, fale conosco pelo WhatsApp ou siga-nos no Instagram:</p>
+        <div class="social-links">
+            <a href="https://wa.me/+554796351644" target="_blank" class="social-button whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/biscoitosda_danii/" target="_blank" class="social-button instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Doces da Dani - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        // Script para menu mobile (caso precise)
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

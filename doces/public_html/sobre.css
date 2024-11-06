@@ -1,0 +1,116 @@
+/* Resetando margens e preenchimentos para evitar problemas de layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o Body */
+body {
+    background-color: #f7f1e3; /* Bege claro */
+    color: #5d4a3b; /* Marrom escuro */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para o Header */
+header {
+    background-color: #d6b48c; /* Marrom claro */
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Container para centralizar conteúdo do header */
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens dentro do container */
+    align-items: center;
+}
+
+/* Estilo para a Navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding-left: 0;
+    justify-content: center; /* Centraliza os itens do menu */
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #3e2b1f; /* Cor de destaque suave ao passar o mouse */
+}
+
+/* Estilo para a Seção Sobre */
+.sobre {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 32px;
+    font-family: 'Dancing Script', cursive;
+    color: #5d4a3b;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.imagem-timbo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.imagem-timbo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1); /* Aumentar brilho ao passar o mouse */
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #d6b48c; /* Marrom claro */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Animação para o Header */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

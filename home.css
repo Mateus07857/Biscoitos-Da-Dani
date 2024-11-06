@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f1e3; /* Bege claro */
+    color: #5d4a3b; /* Marrom escuro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #d6b48c; /* Marrom claro */
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideInDown 0.5s ease-in-out;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centralizando o conteúdo */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px; /* Adicionando espaço entre os itens */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #f1c40f;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.banner {
+    background: url('img/banner.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 120px 20px; /* Aumentando a área de clique do banner */
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.delicias-texto {
+    font-style: italic;
+    font-size: 32px;
+    color: #5d4a3b; /* Marrom escuro */
+    margin: 0;
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    top: 20%; /* Ajustado para ficar mais para cima */
+    transform: translateY(-50%); /* Centraliza a frase verticalmente */
+    width: 100%;
+}
+
+.cta-button {
+    background-color: #d6b48c;
+    color: #fff;
+    padding: 20px 40px; /* Aumentando o tamanho do botão */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    z-index: 1; /* Colocando o botão abaixo do texto */
+    overflow: hidden;
+    font-size: 24px; /* Aumentando o tamanho da fonte do botão */
+    height: 60px; /* Aumentando a altura do botão */
+    margin-top: 150px; /* Espaçamento para separar o botão da frase */
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+    transform: scale(0);
+    border-radius: 5px;
+}
+
+.cta-button:hover::before {
+    transform: scale(1);
+}
+
+.cta-button:hover {
+    background-color: #b5946b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-section {
+    background-color: #f1e4d3; /* Bege mais escuro */
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeInUp 0.6s ease;
+    margin-top: 120px; /* Aumentando margem superior para mais espaçamento */
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #5d4a3b;
+    text-transform: uppercase;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #6b4c3b;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.saiba-mais-button {
+    background-color: #d6b48c;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.saiba-mais-button:hover {
+    background-color: #b5946b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
+footer {
+    background-color: #5d4a3b; /* Marrom escuro */
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px; /* Adicionando mais espaçamento superior e inferior */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+footer .social-button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+footer .social-button:hover {
+    color: #f1c40f;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .cta-button {
+        font-size: 20px;
+    }
+
+    .delicias-texto {
+        font-size: 24px;
+    }
+}

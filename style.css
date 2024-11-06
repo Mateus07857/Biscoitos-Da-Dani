@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f1e3; /* Bege claro */
+    color: #5d4a3b; /* Marrom escuro */
+}
+
+header {
+    background-color: #d6b48c; /* Marrom claro */
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideInDown 0.5s ease-in-out; /* Animação de entrada */
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-family: 'Dancing Script', cursive;
+    color: #fff; /* Branco para contraste */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Aumentar logo ao passar o mouse */
+    color: #f1c40f; /* Amarelo claro para destaque */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Branco para contraste */
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #f1c40f; /* Amarelo claro para destaque */
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white; /* Branco para contraste */
+    margin: 4px 0;
+}
+
+.banner {
+    background: url('img/banner.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff; /* Branco para contraste */
+    position: relative;
+    overflow: hidden;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: fadeInUp 0.6s ease; /* Animação de entrada */
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.banner p {
+    font-size: 18px;
+    opacity: 0.9; /* Leve transparência para um efeito mais suave */
+}
+
+.cta-button {
+    background-color: #d6b48c; /* Marrom claro */
+    color: #fff; /* Branco para contraste */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Camada branca semi-transparente */
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+    transform: scale(0);
+    border-radius: 5px;
+}
+
+.cta-button:hover::before {
+    transform: scale(1); /* Efeito de pulsar */
+}
+
+.cta-button:hover {
+    background-color: #b5946b; /* Marrom mais escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre {
+    padding: 40px 20px;
+}
+
+.imagem-sobre {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.imagem-sobre:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1); /* Aumentar brilho ao passar o mouse */
+}
+
+.produtos {
+    background-color: #fff; /* Fundo branco para destaque */
+}
+
+.produtos-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.produto {
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Efeito de zoom nos produtos */
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.produto img:hover {
+    transform: scale(1.1); /* Efeito de zoom na imagem do produto */
+    filter: brightness(1.1); /* Aumentar brilho ao passar o mouse */
+}
+
+.produto::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Camada branca semi-transparente */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.produto:hover::after {
+    opacity: 1; /* Efeito de sobreposição ao passar o mouse */
+}
+
+.contato {
+    background-color: #f9f3e8; /* Bege suave */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    animation: fadeIn 0.6s ease; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contato h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #5d4a3b; /* Marrom escuro */
+}
+
+.contato p {
+    color: #333; /* Marrom claro */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #5d4a3b; /* Marrom escuro ao focar */
+    box-shadow: 0 0 5px rgba(93, 74, 59, 0.5); /* Sombra ao focar */
+}
+
+form button {
+    padding: 10px;
+    background-color: #5d4a3b; /* Marrom escuro */
+    color: white; /* Branco para contraste */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+    background-color: #7c6b5b; /* Marrom mais claro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-button {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #5d4a3b; /* Marrom escuro */
+    transition: color 0.3s;
+}
+
+.social-button:hover {
+    color: #d6b48c; /* Marrom claro ao passar o mouse */
+}
